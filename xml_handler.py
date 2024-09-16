@@ -2,24 +2,35 @@
 import xml.etree.ElementTree as ET
 
 def save_to_xml(data, filename):
+    import xml.etree.ElementTree as ET
+
+    # Создаем корневой элемент XML с тегом 'data'
     root = ET.Element('data')
 
     movies = ET.SubElement(root, 'movies')
     for movie in data['movies']:
+        # Для каждого фильма создаем элемент 'movie'
         movie_element = ET.SubElement(movies, 'movie')
+        
+        # Добавляем подэлементы для каждого свойства фильма 
         for key, value in movie.items():
             child = ET.SubElement(movie_element, key)
-            child.text = str(value)
+            child.text = str(value)  # Преобразуем значение в строку и добавляем в элемент
 
     tvseries = ET.SubElement(root, 'tvseries')
     for series in data['tvseries']:
+
         series_element = ET.SubElement(tvseries, 'series')
+        
         for key, value in series.items():
             child = ET.SubElement(series_element, key)
-            child.text = str(value)
+            child.text = str(value)  
 
+    # Создаем дерево XML и записываем его в файл
     tree = ET.ElementTree(root)
     tree.write(filename, encoding='utf-8', xml_declaration=True)
+
+    print(f"Данные успешно сохранены в файл '{filename}'")
 
 def load_from_xml(filename):
     try:
