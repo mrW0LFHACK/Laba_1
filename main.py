@@ -10,8 +10,10 @@ def get_positive_int(x):
                 return value
             else:
                 print("Число должно быть положительным.")
-        except Exception: 
-            print("Пожалуйста, введите целое число.")
+        #except Exception: 
+        #    print("Пожалуйста, введите целое число.")
+        except Exception as e: 
+            print(e)
 
 def get_year(x):
     while True:
@@ -21,9 +23,11 @@ def get_year(x):
                 return year
             else:
                 print("Год должен быть в диапазоне от 1895 до 2024.")
-        except Exception: 
-            print("Пожалуйста, введите целое число.")
-
+        except Exception as e: 
+            print(e)
+#       except Exception: 
+#           print("Пожалуйста, введите целое число.")
+            
 def print_data(data, file_format):
     if file_format == 'json':
         print("\nДанные из JSON:")
