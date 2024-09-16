@@ -10,7 +10,7 @@ def get_positive_int(x):
                 return value
             else:
                 print("Число должно быть положительным.")
-        except ValueError:
+        except Exception: 
             print("Пожалуйста, введите целое число.")
 
 def get_year(x):
@@ -21,7 +21,7 @@ def get_year(x):
                 return year
             else:
                 print("Год должен быть в диапазоне от 1895 до 2024.")
-        except ValueError:
+        except Exception: 
             print("Пожалуйста, введите целое число.")
 
 def print_data(data, file_format):
