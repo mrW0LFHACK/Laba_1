@@ -47,6 +47,12 @@
             "director": "kek",
             "year": 2000,
             "duration": 200
+        },
+        {
+            "title": "Sync_test",
+            "director": "Sync_test",
+            "year": 2002,
+            "duration": 2002
         }
     ],
     "tvseries": [

@@ -38,6 +38,47 @@ def print_data(data, file_format):
     for series in data['tvseries']:
         print(f"Название: {series['title']}, Режиссер: {series['director']}, Год: {series['year']}, Сезонов: {series['seasons']}, Эпизодов: {series['episodes']}")
 
+def sync_data(json_data, xml_data):    
+    json_movies = {} 
+    for movie in json_data['movies']:  
+            title = movie['title'] 
+            json_movies[title] = movie  
+
+    xml_movies = {}  
+    for movie in xml_data['movies']: 
+        title = movie['title']  
+        xml_movies[title] = movie  
+
+    for title, movie in json_movies.items():
+        if title not in xml_movies:
+            print(f"Добавляем фильм '{title}' в XML из JSON.")
+            xml_data['movies'].append(movie)
+
+    for title, movie in xml_movies.items():
+        if title not in json_movies:
+            print(f"Добавляем фильм '{title}' в JSON из XML.")
+            json_data['movies'].append(movie)
+
+    json_tvseries = {} 
+    for series in json_data['tvseries']: 
+        title = series['title']  
+        json_tvseries[title] = series 
+
+    xml_tvseries = {} 
+    for series in xml_data['tvseries']: 
+        title = series['title']  
+        xml_tvseries[title] = series  
+
+    for title, series in json_tvseries.items():
+        if title not in xml_tvseries:
+            print(f"Добавляем сериал '{title}' в XML из JSON.")
+            xml_data['tvseries'].append(series)
+
+    for title, series in xml_tvseries.items():
+        if title not in json_tvseries:
+            print(f"Добавляем сериал '{title}' в JSON из XML.")
+            json_data['tvseries'].append(series)
+
 def main():
     print("Выберите формат файла (json/xml):")
     file_format = input().lower()
@@ -65,6 +106,7 @@ def main():
         print("4 - Удалить сериал")
         print("5 - Сохранить")
         print("6 - Выход")
+        print("7 - Сравнить и синхронизировать JSON и XML")
         print("13 - Вывести данные из JSON")
         print("169 - Вывести данные из XML")
 
@@ -102,6 +144,14 @@ def main():
 
         elif action == '6':
             break
+
+        elif action == '7':
+            json_data = json_handler.load_from_json('data.json')
+            xml_data = xml_handler.load_from_xml('data.xml')
+            sync_data(json_data, xml_data)
+            json_handler.save_to_json(json_data, 'data.json')
+            xml_handler.save_to_xml(xml_data, 'data.xml')
+            print("Данные успешно синхронизированы и сохранены в оба файла.")
 
         elif action == '13':
             if file_format != 'json':
