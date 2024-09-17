@@ -15,6 +15,18 @@ def get_positive_int(x):
         except Exception as e: 
             print(e)
 
+def show_statistics(data):
+    num_movies = len(data['movies'])
+    num_tvseries = len(data['tvseries'])
+    
+    avg_movie_duration = sum(int(movie['duration']) for movie in data['movies']) / num_movies if num_movies > 0 else 0
+    avg_series_episodes = sum(int(series['episodes']) for series in data['tvseries']) / num_tvseries if num_tvseries > 0 else 0
+
+    print(f"Общее количество фильмов: {num_movies}")
+    print(f"Общее количество сериалов: {num_tvseries}")
+    print(f"Средняя продолжительность фильмов: {avg_movie_duration:.2f} минут")
+    print(f"Среднее количество эпизодов в сериалах: {avg_series_episodes:.2f}")
+
 def get_year(x):
     while True:
         try:
@@ -111,6 +123,7 @@ def main():
         print("5 - Сохранить")
         print("6 - Выход")
         print("7 - Сравнить и синхронизировать JSON и XML")
+        print("8 - Статистика по БД")
         print("13 - Вывести данные из JSON")
         print("169 - Вывести данные из XML")
 
@@ -156,7 +169,8 @@ def main():
             json_handler.save_to_json(json_data, 'data.json')
             xml_handler.save_to_xml(xml_data, 'data.xml')
             print("Данные успешно синхронизированы и сохранены в оба файла.")
-
+        elif action == '8':
+            show_statistics(data)
 
         elif action == '13':
             if file_format != 'json':
