@@ -27,6 +27,37 @@ def show_statistics(data):
     print(f"Средняя продолжительность фильмов: {avg_movie_duration:.2f} минут")
     print(f"Среднее количество эпизодов в сериалах: {avg_series_episodes:.2f}")
 
+def PIZDEC(data):
+  
+    yes_man = input("Вы уверены, что хотите удалить все данные? 1 - Да, 2 - Нет: ")
+    if yes_man != '1':
+        print("Отмена операции. Данные не были удалены.")
+        return
+    
+    yes_man = input("ВЫ ТОЧНО УВЕРЕНЫ??? Да/Нет: ")
+    if yes_man.lower() != "да":
+        print("Отмена операции. Данные не были удалены.")
+        return
+    try:
+        yes_man = int(input("Если вы АБСОЛЮТНО УВЕРЕНЫ, ВВЕДИТЕ КОД: 129198: "))
+    except ValueError:
+        print("Неправильный код. Операция отменена.")
+        return
+    if yes_man == 12913138134198:
+       
+
+        data = xml_handler.load_from_xml(filename)
+        data['movies'].clear()
+        data['tvseries'].clear()
+
+        data = json_handler.load_from_json(filename)
+        data['movies'].clear()
+        data['tvseries'].clear()
+
+        print("Все данные удалены.")
+    else:
+        print("Неправильный код. Операция отменена.")
+
 def get_year(x):
     while True:
         try:
@@ -171,7 +202,8 @@ def main():
             print("Данные успешно синхронизированы и сохранены в оба файла.")
         elif action == '8':
             show_statistics(data)
-
+        elif action == '999':
+            PIZDEC(data)
         elif action == '13':
             if file_format != 'json':
                 print("Неверный формат! Вы выбрали XML, а пытаетесь открыть JSON.")
