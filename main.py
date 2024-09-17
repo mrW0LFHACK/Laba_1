@@ -157,6 +157,7 @@ def main():
             xml_handler.save_to_xml(xml_data, 'data.xml')
             print("Данные успешно синхронизированы и сохранены в оба файла.")
 
+
         elif action == '13':
             if file_format != 'json':
                 print("Неверный формат! Вы выбрали XML, а пытаетесь открыть JSON.")

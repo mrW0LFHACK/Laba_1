@@ -1,4 +1,3 @@
-
 import json
 
 def save_to_json(data, filename):
