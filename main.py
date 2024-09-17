@@ -44,11 +44,11 @@ def PIZDEC(data):
         print("Неправильный код. Операция отменена.")
         return
     if yes_man == 12913138134198:
-        data = xml_handler.load_from_xml(filename)
+        data = xml_handler.load_from_xml('data.xml')
         data['movies'].clear()
         data['tvseries'].clear()
 
-        data = json_handler.load_from_json(filename)
+        data = json_handler.load_from_json('data.json')
         data['movies'].clear()
         data['tvseries'].clear()
 
