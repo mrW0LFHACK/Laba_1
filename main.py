@@ -99,12 +99,12 @@ def sync_data(json_data, xml_data):
 
     for title, movie in json_movies.items():
         if title not in xml_movies:
-            print(f"Добавляем фильм '{title}' в XML из JSON.")
+            print(f" фильм '{title}' в XML из JSON.")
             xml_data['movies'].append(movie)
 
     for title, movie in xml_movies.items():
         if title not in json_movies:
-            print(f"Добавляем фильм '{title}' в JSON из XML.")
+            print(f" фильм '{title}' в JSON из XML.")
             json_data['movies'].append(movie)
 
     json_tvseries = {} 
@@ -119,12 +119,12 @@ def sync_data(json_data, xml_data):
 
     for title, series in json_tvseries.items():
         if title not in xml_tvseries:
-            print(f"Добавляем сериал '{title}' в XML из JSON.")
+            print(f" сериал '{title}' в XML из JSON.")
             xml_data['tvseries'].append(series)
 
     for title, series in xml_tvseries.items():
         if title not in json_tvseries:
-            print(f"Добавляем сериал '{title}' в JSON из XML.")
+            print(f" сериал '{title}' в JSON из XML.")
             json_data['tvseries'].append(series)
 
 def main():
