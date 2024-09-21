@@ -2,6 +2,9 @@ import json_
 import xml_
 from media import Movie, TVSeries
 # Добавь функции в класс
+class InvalidFileFormatError(Exception):
+    pass
+
 def get_positive_int(x):
     while True:
         try:
@@ -203,10 +206,13 @@ def main():
         elif action == '999':
             PIZDEC(data)
         elif action == '13':
-            if file_format != 'json':
-                print("Неверный формат! Вы выбрали XML, а пытаетесь открыть JSON.")
-            else:     
-                print_data(data, file_format)
+            try:
+                if file_format != 'json':
+                    raise InvalidFileFormatError("Неверный формат! Вы выбрали XML, а пытаетесь открыть JSON.")
+                else:
+                    print_data(data, file_format)
+            except InvalidFileFormatError as e:
+                print(f"Ошибка: {e}")
 
         elif action == '169':
             if file_format != 'xml':
