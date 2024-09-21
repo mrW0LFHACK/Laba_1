@@ -19,7 +19,7 @@ class Movie(Media):
     def __init__(self, title, director, year, duration):
         super().__init__(title, director, year)  
         self.duration = duration
-
+# ААА
     def to_dict(self):
         movie_dict = super().to_dict() 
         movie_dict.update({
