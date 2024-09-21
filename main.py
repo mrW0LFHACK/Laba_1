@@ -14,7 +14,6 @@ def get_positive_int(x):
         #    print("Пожалуйста, введите целое число.")
         except Exception as e: 
             print(e)
-
 def show_statistics(data):
     num_movies = len(data['movies'])
     num_tvseries = len(data['tvseries'])
@@ -26,7 +25,6 @@ def show_statistics(data):
     print(f"Общее количество сериалов: {num_tvseries}")
     print(f"Средняя продолжительность фильмов: {avg_movie_duration:.2f} минут")
     print(f"Среднее количество эпизодов в сериалах: {avg_series_episodes:.2f}")
-
 def PIZDEC(data):
   
     yes_man = input("Вы уверены, что хотите удалить все данные? 1 - Да, 2 - Нет: ")
