@@ -227,7 +227,7 @@ def main():
                 else:
                     print_data(data, file_format)
             except InvalidFileFormatError as e:
-                print(f"Ошибка: {e}")
+                print(f"{e}")
 
         else:
             print("Неверная команда!")
