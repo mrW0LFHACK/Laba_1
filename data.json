@@ -3,100 +3,100 @@
         {
             "title": "\u041d\u0430\u0447\u0430\u043b\u043e",
             "director": "\u041a\u0440\u0438\u0441\u0442\u043e\u0444\u0435\u0440 \u041d\u043e\u043b\u0430\u043d",
-            "year": 2010,
-            "duration": 148
+            "year": "2010",
+            "duration": "148"
         },
         {
             "title": "\u041c\u0430\u0442\u0440\u0438\u0446\u0430",
             "director": "\u041b\u0430\u043d\u0430(\u041b\u043e\u0443\u0440\u0435\u043d\u0441) \u0438 \u041b\u0438\u043b\u043b\u0438(\u042d\u043d\u0434\u0440\u044e) \u0412\u0430\u0447\u043e\u0432\u0441\u043a\u0438",
-            "year": 1999,
-            "duration": 136
+            "year": "1999",
+            "duration": "136"
         },
         {
             "title": "\u0417\u0435\u043b\u0435\u043d\u0430\u044f \u043c\u0438\u043b\u044f",
             "director": "\u0424\u0440\u044d\u043d\u043a \u0414\u0430\u0440\u0430\u0431\u043e\u043d\u0442",
-            "year": 1999,
-            "duration": 189
+            "year": "1999",
+            "duration": "189"
         },
         {
             "title": "\u0411\u0440\u0438\u043b\u043b\u0438\u0430\u043d\u0442\u043e\u0432\u0430\u044f \u0440\u0443\u043a\u0430",
             "director": "\u041b\u0435\u043e\u043d\u0438\u0434 \u0413\u0430\u0439\u0434\u0430\u0439",
-            "year": 1969,
-            "duration": 100
+            "year": "1969",
+            "duration": "100"
         },
         {
             "title": "\u041e\u0440\u0443\u0436\u0435\u0439\u043d\u044b\u0439 \u0431\u0430\u0440\u043e\u043d",
             "director": "\u042d\u0439\u043c\u0438 \u0411\u0435\u043d\u0441\u0441\u043e\u043d",
-            "year": 2005,
-            "duration": 123
+            "year": "2005",
+            "duration": "123"
         },
         {
             "title": "\u041a\u0442\u043e \u044f",
             "director": "\u0411\u0430\u0440\u0430\u043d \u0431\u043e \u041e\u0434\u0430\u0440",
-            "year": 2014,
-            "duration": 106
+            "year": "2014",
+            "duration": "106"
         },
         {
             "title": "test",
             "director": "test",
-            "year": 2000,
-            "duration": 200
+            "year": "2000",
+            "duration": "200"
         },
         {
             "title": "lol",
             "director": "kek",
-            "year": 2000,
-            "duration": 200
+            "year": "2000",
+            "duration": "200"
         },
         {
             "title": "Sync_test",
             "director": "Sync_test",
-            "year": 2002,
-            "duration": 2002
+            "year": "2002",
+            "duration": "2002"
         }
     ],
     "tvseries": [
         {
             "title": "\u0412\u043e \u0432\u0441\u0435 \u0442\u044f\u0436\u043a\u0438\u0435",
             "director": "\u0412\u0438\u043d\u0441 \u0413\u0438\u043b\u043b\u0438\u0433\u0430\u043d(Pizza king)",
-            "year": 2008,
-            "seasons": 5,
-            "episodes": 62
+            "year": "2008",
+            "seasons": "5",
+            "episodes": "62"
         },
         {
             "title": "\u0423\u044d\u043d\u0437\u0434\u0435\u0439",
             "director": "\u0427\u0430\u0440\u043b\u044c\u0437 \u0410\u0434\u0430\u043c\u0441",
-            "year": 2022,
-            "seasons": 1,
-            "episodes": 8
+            "year": "2022",
+            "seasons": "1",
+            "episodes": "8"
         },
         {
             "title": "\u041f\u0430\u0446\u0430\u043d\u044b",
             "director": "\u042d\u0440\u0438\u043a \u041a\u0440\u0438\u043f\u043a\u0435",
-            "year": 2019,
-            "seasons": 4,
-            "episodes": 32
+            "year": "2019",
+            "seasons": "4",
+            "episodes": "32"
         },
         {
             "title": "\u0418\u0433\u0440\u0430 \u043f\u0440\u0435\u0441\u0442\u043e\u043b\u043e\u0432",
             "director": "\u0414\u044d\u0432\u0438\u0434 \u0411\u0435\u043d\u0438\u043e\u0444\u0444 \u0438 \u0414.\u0411. \u0423\u0430\u0439\u0441",
-            "year": 2011,
-            "seasons": 8,
-            "episodes": 73
+            "year": "2011",
+            "seasons": "8",
+            "episodes": "73"
         },
         {
             "title": "\u0421\u043e\u043f\u0440\u0430\u043d\u043e",
             "director": "\u0414\u044d\u0432\u0438\u0434 \u0427\u0435\u0439\u0437",
-            "year": 1999,
-            "seasons": 6,
-            "episodes": 86
+            "year": "1999",
+            "seasons": "6",
+            "episodes": "86"
         },
         {
             "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0425\u0430\u0443\u0441",
             "director": "\u0414\u044d\u0432\u0438\u0434 \u0428\u043e\u0440, \u0414\u044d\u0432\u0438\u0434 \u0424\u043e\u0441\u0442\u0435\u0440, \u0421\u0430\u0440\u0430 \u0425\u0435\u0441\u0441",
-            "year": 2012,
-            "seasons": 8,
-            "episodes": 177
+            "year": "2012",
+            "seasons": "8",
+            "episodes": "177"
         }
     ]
 }

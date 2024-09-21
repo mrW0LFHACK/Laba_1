@@ -1,7 +1,6 @@
 import json_
 import xml_
 from media import Movie, TVSeries
-# Добавь функции в класс
 class InvalidFileFormatError(Exception):
     pass
 
