@@ -215,16 +215,19 @@ def main():
                 print(f"Ошибка: {e}")
 
         elif action == '169':
-            if file_format != 'xml':
-                counter += 1
-                if counter == 1:
-                    print("Бывает, промахнулся, ничего страшного.")
-                elif counter ==2:
-                    print("Чумба, попей колесики.")
+            try:
+                if file_format != 'xml':
+                    counter += 1
+                    if counter == 1:
+                        raise InvalidFileFormatError("Бывает, промахнулся, ничего страшного.")
+                    elif counter == 2:
+                        raise InvalidFileFormatError("Чумба, попей колесики.")
+                    else:
+                        raise InvalidFileFormatError("Ты меня пугаешь...неужели ты не понял что вообще нет смысла в разделении... и ничего мне не мешало немного изменить код? Я просто хотел хоть где то оставить свою лепту, ибо меняя названия переменных я бы потом вообще не понял, а где что....")
                 else:
-                    print("Ты меня пугаешь...неужели ты не понял что вообще нет смысла в разделении... и ничего мне не мешало немного изменить код? Я просто хотел хоть где то оставить свою лепту, ибо меняя названия переменных я бы потом вообще не понял, а где что....")
-            else:     
-                print_data(data, file_format)
+                    print_data(data, file_format)
+            except InvalidFileFormatError as e:
+                print(f"Ошибка: {e}")
 
         else:
             print("Неверная команда!")
