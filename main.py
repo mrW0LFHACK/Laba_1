@@ -1,5 +1,5 @@
-import json_handler
-import xml_handler
+import json
+import xml
 from media import Movie, TVSeries
 # Добавь функции в класс
 def get_positive_int(x):
@@ -44,11 +44,11 @@ def PIZDEC(data):
         print("Неправильный код. Операция отменена.")
         return
     if yes_man == 12913138134198:
-        data = xml_handler.load_from_xml('data.xml')
+        data = xml.load_from_xml('data.xml')
         data['movies'].clear()
         data['tvseries'].clear()
 
-        data = json_handler.load_from_json('data.json')
+        data = json.load_from_json('data.json')
         data['movies'].clear()
         data['tvseries'].clear()
 
@@ -131,12 +131,12 @@ def main():
     filename_xml = 'data.xml'
     if file_format == 'json':
         filename = 'data.json'
-        data = json_handler.load_from_json(filename)
-        handler = json_handler
+        data = json.load_from_json(filename)
+        handler = json
     elif file_format == 'xml':
         filename = 'data.xml'
-        data = xml_handler.load_from_xml(filename)
-        handler = xml_handler
+        data = xml.load_from_xml(filename)
+        handler = xml
     else:
         print("Неверный формат!")
         return
@@ -184,19 +184,19 @@ def main():
             handler.delete_tvseries(data, title)
 
         elif action == '5':
-            json_handler.save_to_json(data, filename_json)
-            xml_handler.save_to_xml(data, filename_xml)
+            json.save_to_json(data, filename_json)
+            xml.save_to_xml(data, filename_xml)
             print(f"Данные сохранены в {filename_json} и {filename_xml}")
 
         elif action == '6':
             break
 
         elif action == '7':
-            json_data = json_handler.load_from_json('data.json')
-            xml_data = xml_handler.load_from_xml('data.xml')
+            json_data = json.load_from_json('data.json')
+            xml_data = xml.load_from_xml('data.xml')
             sync_data(json_data, xml_data)
-            json_handler.save_to_json(json_data, 'data.json')
-            xml_handler.save_to_xml(xml_data, 'data.xml')
+            json.save_to_json(json_data, 'data.json')
+            xml.save_to_xml(xml_data, 'data.xml')
             print("Данные успешно синхронизированы и сохранены в оба файла.")
         elif action == '8':
             show_statistics(data)
