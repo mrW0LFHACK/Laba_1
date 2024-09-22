@@ -15,6 +15,7 @@ class Media:
         return f"Название: {self.title}, режиссер: {self.director}, год: {self.year}"
 
 
+
 class Movie(Media):
     def __init__(self, title, director, year, duration):
         super().__init__(title, director, year)  

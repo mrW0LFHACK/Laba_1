@@ -1,8 +1,22 @@
 import xml.etree.ElementTree as ET
 
-def save_to_xml(data, filename):
-    import xml.etree.ElementTree as ET
+# Функция для добавления отступов (pretty-print)
+def indent(elem, level=0):
+    i = "\n" + level * "  "
+    if len(elem):
+        if not elem.text or not elem.text.strip():
+            elem.text = i + "  "
+        if not elem.tail or not elem.tail.strip():
+            elem.tail = i
+        for subelem in elem:
+            indent(subelem, level + 1)
+        if not subelem.tail or not subelem.tail.strip():
+            subelem.tail = i
+    else:
+        if level and (not elem.tail or not elem.tail.strip()):
+            elem.tail = i
 
+def save_to_xml(data, filename):
     root = ET.Element('data')
 
     movies = ET.SubElement(root, 'movies')
@@ -18,6 +32,9 @@ def save_to_xml(data, filename):
         for key, value in series.items():
             child = ET.SubElement(series_element, key)
             child.text = str(value)  
+
+    # Добавляем отступы для красивого форматирования
+    indent(root)
 
     # Создаем дерево XML и записываем его в файл
     tree = ET.ElementTree(root)
@@ -55,7 +72,6 @@ def add_tvseries(data, tvseries):
     data['tvseries'].append(tvseries.to_dict())
 
 def delete_movie(data, title):
-    # Тут мем в том что я создаю 2й список просто в нем нет 1го удаленного XD
     upd = []
     for movie in data['movies']:
         if movie['title'] != title:

@@ -1,2 +1,103 @@
 <?xml version='1.0' encoding='utf-8'?>
-<data><movies><movie><title>Начало</title><director>Кристофер Нолан</director><year>2010</year><duration>148</duration></movie><movie><title>Матрица</title><director>Лана(Лоуренс) и Лилли(Эндрю) Вачовски</director><year>1999</year><duration>136</duration></movie><movie><title>Зеленая миля</title><director>Фрэнк Дарабонт</director><year>1999</year><duration>189</duration></movie><movie><title>Бриллиантовая рука</title><director>Леонид Гайдай</director><year>1969</year><duration>100</duration></movie><movie><title>Оружейный барон</title><director>Эйми Бенссон</director><year>2005</year><duration>123</duration></movie><movie><title>Кто я</title><director>Баран бо Одар</director><year>2014</year><duration>106</duration></movie><movie><title>test</title><director>test</director><year>2000</year><duration>200</duration></movie><movie><title>lol</title><director>kek</director><year>2000</year><duration>200</duration></movie><movie><title>Sync_test</title><director>Sync_test</director><year>2002</year><duration>2002</duration></movie></movies><tvseries><series><title>Во все тяжкие</title><director>Винс Гиллиган(Pizza king)</director><year>2008</year><seasons>5</seasons><episodes>62</episodes></series><series><title>Уэнздей</title><director>Чарльз Адамс</director><year>2022</year><seasons>1</seasons><episodes>8</episodes></series><series><title>Пацаны</title><director>Эрик Крипке</director><year>2019</year><seasons>4</seasons><episodes>32</episodes></series><series><title>Игра престолов</title><director>Дэвид Бениофф и Д.Б. Уайс</director><year>2011</year><seasons>8</seasons><episodes>73</episodes></series><series><title>Сопрано</title><director>Дэвид Чейз</director><year>1999</year><seasons>6</seasons><episodes>86</episodes></series><series><title>Доктор Хаус</title><director>Дэвид Шор, Дэвид Фостер, Сара Хесс</director><year>2012</year><seasons>8</seasons><episodes>177</episodes></series></tvseries></data>
+<data>
+  <movies>
+    <movie>
+      <title>Начало</title>
+      <director>Кристофер Нолан</director>
+      <year>2010</year>
+      <duration>148</duration>
+    </movie>
+    <movie>
+      <title>Матрица</title>
+      <director>Лана(Лоуренс) и Лилли(Эндрю) Вачовски</director>
+      <year>1999</year>
+      <duration>136</duration>
+    </movie>
+    <movie>
+      <title>Зеленая миля</title>
+      <director>Фрэнк Дарабонт</director>
+      <year>1999</year>
+      <duration>189</duration>
+    </movie>
+    <movie>
+      <title>Бриллиантовая рука</title>
+      <director>Леонид Гайдай</director>
+      <year>1969</year>
+      <duration>100</duration>
+    </movie>
+    <movie>
+      <title>Оружейный барон</title>
+      <director>Эйми Бенссон</director>
+      <year>2005</year>
+      <duration>123</duration>
+    </movie>
+    <movie>
+      <title>Кто я</title>
+      <director>Баран бо Одар</director>
+      <year>2014</year>
+      <duration>106</duration>
+    </movie>
+    <movie>
+      <title>test</title>
+      <director>test</director>
+      <year>2000</year>
+      <duration>200</duration>
+    </movie>
+    <movie>
+      <title>lol</title>
+      <director>kek</director>
+      <year>2000</year>
+      <duration>200</duration>
+    </movie>
+    <movie>
+      <title>Sync_test</title>
+      <director>Sync_test</director>
+      <year>2002</year>
+      <duration>2002</duration>
+    </movie>
+  </movies>
+  <tvseries>
+    <series>
+      <title>Во все тяжкие</title>
+      <director>Винс Гиллиган(Pizza king)</director>
+      <year>2008</year>
+      <seasons>5</seasons>
+      <episodes>62</episodes>
+    </series>
+    <series>
+      <title>Уэнздей</title>
+      <director>Чарльз Адамс</director>
+      <year>2022</year>
+      <seasons>1</seasons>
+      <episodes>8</episodes>
+    </series>
+    <series>
+      <title>Пацаны</title>
+      <director>Эрик Крипке</director>
+      <year>2019</year>
+      <seasons>4</seasons>
+      <episodes>32</episodes>
+    </series>
+    <series>
+      <title>Игра престолов</title>
+      <director>Дэвид Бениофф и Д.Б. Уайс</director>
+      <year>2011</year>
+      <seasons>8</seasons>
+      <episodes>73</episodes>
+    </series>
+    <series>
+      <title>Сопрано</title>
+      <director>Дэвид Чейз</director>
+      <year>1999</year>
+      <seasons>6</seasons>
+      <episodes>86</episodes>
+    </series>
+    <series>
+      <title>Доктор Хаус</title>
+      <director>Дэвид Шор, Дэвид Фостер, Сара Хесс</director>
+      <year>2012</year>
+      <seasons>8</seasons>
+      <episodes>177</episodes>
+    </series>
+  </tvseries>
+</data>
