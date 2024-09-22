@@ -32,11 +32,8 @@ def save_to_xml(data, filename):
         for key, value in series.items():
             child = ET.SubElement(series_element, key)
             child.text = str(value)  
-
-    # Добавляем отступы для красивого форматирования
     indent(root)
 
-    # Создаем дерево XML и записываем его в файл
     tree = ET.ElementTree(root)
     tree.write(filename, encoding='utf-8', xml_declaration=True)
 
