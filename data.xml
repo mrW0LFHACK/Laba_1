@@ -105,5 +105,12 @@
       <seasons>8</seasons>
       <episodes>177</episodes>
     </series>
+    <series>
+      <title>MLP</title>
+      <director>MLP_BOY</director>
+      <year>2008</year>
+      <seasons>9</seasons>
+      <episodes>100</episodes>
+    </series>
   </tvseries>
 </data>

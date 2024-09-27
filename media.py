@@ -47,3 +47,20 @@ class TVSeries(Media):
 
     def __str__(self):
         return f"Сериал: {self.title}, режиссер: {self.director}, год: {self.year}, сезонов: {self.seasons}, эпизодов: {self.episodes}"
+
+class MULT_SERIAL(Media):
+    def __init__(self, title, director, year, seasons, episodes):
+        super().__init__(title, director, year)  
+        self.seasons = seasons
+        self.episodes = episodes
+
+    def to_dict(self):
+        series_dict = super().to_dict()  
+        series_dict.update({
+            "seasons": self.seasons,
+            "episodes": self.episodes
+        })
+        return series_dict
+
+    def __str__(self):
+        return f"Сериал: {self.title}, режиссер: {self.director}, год: {self.year}, сезонов: {self.seasons}, эпизодов: {self.episodes}"

@@ -1,6 +1,6 @@
 import json_
 import xml_
-from media import Movie, TVSeries
+from media import Movie, TVSeries, MULT_SERIAL
 class InvalidFileFormatError(Exception):
     pass
 
@@ -146,8 +146,6 @@ def main():
     counter = 0 
 
     while True:
-       
-
         print("\nВыберите действие:")
         print("1 - Добавить фильм")
         print("2 - Добавить сериал")
@@ -161,6 +159,14 @@ def main():
         print("169 - Вывести данные из XML")
 
         action = input().strip()
+
+        if action == '0':
+            title = input("Введите название мульт сериала: ")
+            director = input("Введите режиссера фильма: ")
+            year = get_year("Введите год выпуска фильма: ")
+            duration = get_positive_int("Введите длительность фильма (в минутах): ")
+            movie = MULT_SERIAL(title, director, year, duration)
+            handler.add_mult_serial(data, movie)
 
         if action == '1':
             title = input("Введите название фильма: ")
