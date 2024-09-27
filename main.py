@@ -146,6 +146,8 @@ def main():
     counter = 0 
 
     while True:
+       
+
         print("\nВыберите действие:")
         print("1 - Добавить фильм")
         print("2 - Добавить сериал")
@@ -209,6 +211,9 @@ def main():
                 if file_format != 'json':
                     raise InvalidFileFormatError("Неверный формат! Вы выбрали XML, а пытаетесь открыть JSON.")
                 else:
+                    filename = 'data.json'
+                    data = json_.load_from_json(filename)
+                    handler = json_
                     print_data(data, file_format)
             except InvalidFileFormatError as e:
                 print(f"Ошибка: {e}")
@@ -224,6 +229,9 @@ def main():
                     else:
                         raise InvalidFileFormatError("Ты меня пугаешь...неужели ты не понял что вообще нет смысла в разделении... и ничего мне не мешало немного изменить код? Я просто хотел хоть где то оставить свою лепту, ибо меняя названия переменных я бы потом вообще не понял, а где что....")
                 else:
+                    filename = 'data.xml'
+                    data = xml_.load_from_xml(filename)
+                    handler = xml_
                     print_data(data, file_format)
             except InvalidFileFormatError as e:
                 print(f"{e}")

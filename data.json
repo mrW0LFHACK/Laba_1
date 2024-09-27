@@ -53,6 +53,12 @@
             "director": "Sync_test",
             "year": "2002",
             "duration": "2002"
+        },
+        {
+            "title": "Дарий няша",
+            "director": "Дарий",
+            "year": "2024",
+            "duration": "111"
         }
     ],
     "tvseries": [
