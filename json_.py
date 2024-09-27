@@ -22,6 +22,3 @@ def delete_movie(data, title):
 
 def delete_tvseries(data, title):
     data['tvseries'] = [series for series in data['tvseries'] if series['title'] != title]
-
-def add_mult_serial(data, movie):
-    data['mult_serial'].append(movie.to_dict())

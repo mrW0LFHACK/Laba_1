@@ -55,8 +55,8 @@
             "duration": "2002"
         },
         {
-            "title": "\u0414\u0430\u0440\u0438\u0439 \u043d\u044f\u0448\u0430",
-            "director": "\u0414\u0430\u0440\u0438\u0439",
+            "title": "Дарий няша",
+            "director": "Дарий",
             "year": "2024",
             "duration": "111"
         }
@@ -103,21 +103,6 @@
             "year": "2012",
             "seasons": "8",
             "episodes": "177"
-        },
-        {
-            "title": "MLP",
-            "director": "MLP_BOY",
-            "year": 2008,
-            "seasons": 9,
-            "episodes": 100
-        }
-    ],
-    "mult_serial": [
-        {
-            "title": "MLP",
-            "director": "noname",
-            "year": 2008,
-            "duration": 20000
         }
     ]
 }

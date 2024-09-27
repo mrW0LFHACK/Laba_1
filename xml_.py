@@ -18,6 +18,7 @@ def indent(elem, level=0):
 
 def save_to_xml(data, filename):
     root = ET.Element('data')
+
     movies = ET.SubElement(root, 'movies')
     for movie in data['movies']:
         movie_element = ET.SubElement(movies, 'movie')
